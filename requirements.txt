@@ -1,0 +1,4 @@
+scipy
+torch
+tonic
+einops
