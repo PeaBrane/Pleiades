@@ -32,7 +32,7 @@ def get_ortho_polynomials(degrees: int, length: int, alpha=0, beta=0):
     return ortho_polynomials
 
 
-class OrthoPolyLayer(nn.Conv3d):
+class PleiadesLayer(nn.Conv3d):
     def __init__(self, *args, degree=4, alpha=0, beta=0, **kwargs):
         super().__init__(*args, **kwargs)
         self.degree, self.alpha, self.beta = degree, alpha, beta
@@ -92,7 +92,7 @@ class STBlock(nn.Module):
         
         if dws:
             self.conv_t = nn.Sequential(
-                OrthoPolyLayer(in_channels, in_channels, 
+                PleiadesLayer(in_channels, in_channels, 
                                (1, 1, kernel_size[-1]), stride=(1, 1, stride[-1]), padding=(0, 0, padding[-1]), 
                                groups=in_channels, bias=False, degree=degree, alpha=alpha, beta=beta), 
                 nn.Sequential(CausalGroupNorm(4, in_channels), nn.ReLU()), 
@@ -113,7 +113,7 @@ class STBlock(nn.Module):
             
         else:
             self.conv_t = nn.Sequential(
-                OrthoPolyLayer(in_channels, med_channels, 
+                PleiadesLayer(in_channels, med_channels, 
                                (1, 1, kernel_size[-1]), stride=(1, 1, stride[-1]), padding=(0, 0, padding[-1]), 
                                bias=False, degree=degree, alpha=alpha, beta=beta), 
                 nn.Sequential(CausalGroupNorm(4, med_channels), nn.ReLU())
