@@ -1,3 +1,7 @@
+# This Repository Has Moved
+
+This repository has been archived and is no longer maintained. Please visit the new repository at [BrainchipInc/Pleiades]([https://github.com/username/new-repository](https://github.com/Brainchip-Inc/Pleiades/tree/main)).
+
 Paper: [Building Temporal Kernels with Orthogonal Polynomials](https://arxiv.org/abs/2405.12179)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/building-temporal-kernels-with-orthogonal/gesture-recognition-on-dvs128-gesture)](https://paperswithcode.com/sota/gesture-recognition-on-dvs128-gesture?p=building-temporal-kernels-with-orthogonal)
