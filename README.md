@@ -1,6 +1,4 @@
-# This Repository Has Moved
-
-This repository has been archived and is no longer maintained. Please visit the new repository at [BrainchipInc/Pleiades](https://github.com/Brainchip-Inc/Pleiades/tree/main).
+# Pleiades
 
 Paper: [Building Temporal Kernels with Orthogonal Polynomials](https://arxiv.org/abs/2405.12179)
 
